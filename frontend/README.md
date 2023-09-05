@@ -15,7 +15,17 @@ npm i --save-dev webpack@3.11.0 webpack-cli
 
 Loaders
 npm i --save-dev html-webpack-plugin html-loader pug-html-loader
-style-loader css-loader less-loader svg-loader 
+
+CSS Loaders
+style-loader css-loader svg-loader 
+less-loader less
+sass-loader node-sass
+npm i --save-dev mini-css-extract-plugin
+
 clean-webpack-plugin
+
 img-loader url-loader file-loader resolve-url-loader
 json-loader jshint-loader jshint  font-loader transform-loader  
+
+Set process.env.NODE_ENV
+SET NODE_ENV=development
