@@ -12,10 +12,12 @@ class UserController extends Component {
 
   componentDidMount() {
     fetch(url)
-      .then(response => response.json)
+      .then(response => response.json())
       .then(
         data => {
-          console.log(data);
+          this.setState({
+            users: data
+          });
         },
         error => {
           console.log("error");
@@ -24,6 +26,16 @@ class UserController extends Component {
   }
 
   render() {
+    const list = this.state.users.map((value, index) => {
+      return (
+        <tr key={index}>
+          <th scope="row">{value.id}</th>
+          <th>{value.firstName}</th>
+          <th>{value.lastName}</th>
+        </tr>
+      );
+    });
+
     return (
       <div>
         <table className="table">
@@ -34,18 +46,7 @@ class UserController extends Component {
               <th>Last Name</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-            </tr>
-          </tbody>
+          <tbody>{list}</tbody>
         </table>
       </div>
     );
