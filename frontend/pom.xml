@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>frontend</groupId>
+	<artifactId>frontend</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>frontend</name>
+	<description>Demo project for Spring Boot</description>
+
+	<parent>
+		<groupId>spring.boot.demo</groupId>
+		<artifactId>spring.boot.demo</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.github.eirslett</groupId>
+			<artifactId>frontend-maven-plugin</artifactId>
+			<version>1.6</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.6</version>
+
+				<configuration>
+					<nodeVersion>v8.11.2</nodeVersion>
+					<npmVersion>6.1.0</npmVersion>
+					<!--<workingDirectory>src/main/frontend</workingDirectory>-->
+					<installDirectory>target</installDirectory>
+				</configuration>
+
+				<executions>
+					<execution>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+					</execution>
+
+					<!--<execution>-->
+					<!--<id>npm install</id>-->
+					<!--<goals>-->
+					<!--<goal>npm</goal>-->
+					<!--</goals>-->
+					<!--</execution>-->
+
+					<execution>
+						<id>npm run build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+
+						<configuration>
+							<arguments>run build</arguments>
+						</configuration>
+					</execution>
+
+					<execution>
+						<id>webpack build</id>
+						<goals>
+							<goal>webpack</goal>
+						</goals>
+						<!-- optional: the default phase is "generate-resources" -->
+						<!--<phase>generate-resources</phase>-->
+
+						<configuration>
+							<!--&lt;!&ndash; optional: if not specified, it will run webpack's default-->
+							<!--build (and you can remove this whole <configuration> section.) &ndash;&gt;-->
+							<arguments>-p</arguments>
+							<!--<arguments>&#45;&#45;mode production</arguments>-->
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy Vue.js frontend content</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.parent.basedir}/backend/src/main/resources</outputDirectory>
+							<overwrite>true</overwrite>
+							<resources>
+								<resource>
+									<directory>${project.parent.basedir}/frontend/build</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
