@@ -21,7 +21,10 @@
     "eject": "react-scripts eject",
     "watch": "webpack --watch -d",
     "prebuild": "npm install",
-    "watch-build": "webpack -d"
+    "watch-build": "webpack -d",
+    "start-webpack": "webpack-dev-server",
+    "start-webserve": "webpack-serve"
+    
   },
   "babel": {
     "presets": [
@@ -61,6 +64,7 @@
     "webpack": "^4.9.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.2",
+    "webpack-serve": "^1.0.2"
   }
 }

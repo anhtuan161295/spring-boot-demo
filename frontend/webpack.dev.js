@@ -21,9 +21,14 @@ module.exports = merge(common, {
   // Development config
   mode: 'development',
   devServer: {
-    hot: true
+    hot: true,
+    contentBase: DIST_DIR,
+    port: 3000,
+    progress: true
   },
+ 
   devtool: 'source-map',
+  watch: true,
 
   entry: {
     app: './src/index.js',
