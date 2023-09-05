@@ -4,6 +4,10 @@ import './App.css';
 
 class App extends Component {
   render() {
+    if (module.hot) {
+      module.hot.accept();
+    }
+
     return (
       <div className="App">
         <header className="App-header">

@@ -5,6 +5,7 @@ const common = require('./webpack.common.js');
 const path = require('path');
 const webpack = require('webpack'); //to access built-in plugins
 
+const PARENT_DIR = path.resolve(__dirname, '../');
 const ROOT_DIR = path.resolve(__dirname, './');
 const DIST_DIR = path.resolve(ROOT_DIR, 'dist');
 const BUILD_DIR = path.resolve(ROOT_DIR, 'build');
@@ -17,8 +18,13 @@ const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const OfflinePlugin = require('offline-plugin');
 
 module.exports = merge(common, {
+  // Development config
   mode: 'development',
+  devServer: {
+    hot: true
+  },
   devtool: 'source-map',
+
   entry: {
     app: './src/index.js',
   },
@@ -41,10 +47,8 @@ module.exports = merge(common, {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: "[name].bundle.css",
-      chunkFilename: "[id].bundle.css"
-    }),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
 
   ],
   optimization: {
@@ -66,12 +70,7 @@ module.exports = merge(common, {
           output: { beautify: false },
         }
       }),
-      new OptimizeCssAssetsPlugin({
-        assetNameRegExp: /\.css$/,
-        cssProcessor: require('cssnano'),
-        cssProcessorOptions: { discardComments: { removeAll: true } },
-        canPrint: true
-      })
+
 
     ]
   }
