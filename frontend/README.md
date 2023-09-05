@@ -14,6 +14,8 @@ npm i -g webpack@3.11.0
 npm i --save-dev webpack@3.11.0 webpack-cli
 
 Loaders
-npm i --save-dev html-webpack-plugin html-loader 
-style-loader css-loader less-loader svg-loader pug-html-loader
-json-loader jshint-loader jshint file-loader font-loader transform-loader url-loader 
+npm i --save-dev html-webpack-plugin html-loader pug-html-loader
+style-loader css-loader less-loader svg-loader 
+clean-webpack-plugin
+img-loader url-loader file-loader resolve-url-loader
+json-loader jshint-loader jshint  font-loader transform-loader  
