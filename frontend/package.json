@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://example.com",
   "dependencies": {
     "file-loader": "^1.1.11",
     "font-loader": "^0.1.2",
@@ -22,9 +23,8 @@
     "watch": "webpack --watch -d",
     "prebuild": "npm install",
     "watch-build": "webpack -d",
-    "start-webpack": "webpack-dev-server",
-    "start-webserve": "webpack-serve"
-    
+    "wp": "webpack-dev-server --inline --progress --watch",
+    "serve": "webpack-serve --config ./webpack.config.js"
   },
   "babel": {
     "presets": [
@@ -55,6 +55,7 @@
     "progress-bar-webpack-plugin": "^1.11.0",
     "pug-html-loader": "^1.1.5",
     "react": "^16.4.0",
+    "react-dev-utils": "^5.0.1",
     "react-dom": "^16.4.0",
     "react-scripts": "^1.1.4",
     "resolve-url-loader": "^2.3.0",

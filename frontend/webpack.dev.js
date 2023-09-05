@@ -23,12 +23,16 @@ module.exports = merge(common, {
   devServer: {
     hot: true,
     contentBase: DIST_DIR,
-    port: 3000,
-    progress: true
+    publicPath: "",
+    // port: 3000,
+    // host: 'localhost',
+    //Be possible go back pressing the "back" button at chrome
+    historyApiFallback: true,
+    progress: true,
+    watchContentBase: true
   },
- 
+
   devtool: 'source-map',
-  watch: true,
 
   entry: {
     app: './src/index.js',
@@ -52,9 +56,8 @@ module.exports = merge(common, {
     ]
   },
   plugins: [
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
-
   ],
   optimization: {
     splitChunks: {

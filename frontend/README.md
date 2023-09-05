@@ -6,6 +6,9 @@ vào C:\Users\QQ xóa .npmrc
 React
 npm install --save-dev react react-dom react-scripts
 
+// React utils to remove %PUBLIC_URL%
+npm i -D react-dev-utils
+
 Babel
 npm i --save-dev babel-loader babel-core babel-preset-env babel-preset-react
 
@@ -17,6 +20,9 @@ Webpack 4
 npm i -g webpack@4 webpack-cli
 npm i --save-dev webpack@4 webpack-cli
 npm i -D extract-text-webpack-plugin@next
+
+// React hot reload
+npm i -D react-hot-loader
 
 // Webpack merge for many profiles
 npm i -D webpack-merge
