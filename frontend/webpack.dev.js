@@ -53,12 +53,13 @@ module.exports = merge(common, {
         use: [
           { loader: MiniCssExtractPlugin.loader },
           { loader: "css-loader" },
-          { loader: "resolve-url-loader" }
+          { loader: "postcss-loader" },
+          { loader: "resolve-url-loader" },
         ]
       },
       {
         test: /\.(scss|sass)$/,
-        // exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules|bower_components)/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
           { loader: "css-loader" },

@@ -109,7 +109,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "fb0ffd0e6fe8763ac0b4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3ca92349a9bebd11e874"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -836,9 +836,17 @@
   !*** ./node_modules/css-loader!./node_modules/resolve-url-loader!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader!./node_modules/postcss-loader/lib!./node_modules/resolve-url-loader!./node_modules/sass-loader/lib/loader.js!./src/App.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: Syntax Error \n\n(8:7) Unnecessary curly bracket\n\n \u001b[90m  6 | \u001b[39m\u001b[90m */\u001b[39m\n \u001b[90m  7 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 | \u001b[39m\u001b[33m:\u001b[39mroot \u001b[33m{\u001b[39m\n \u001b[90m    | \u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 | \u001b[39m  --blue\u001b[33m:\u001b[39m \u001b[35m#007bff\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 10 | \u001b[39m  --indigo\u001b[33m:\u001b[39m \u001b[35m#6610f2\u001b[39m\u001b[33m;\u001b[39m\n\n    at runLoaders (/media/DATA/Projects/Spring/spring.boot.demo/frontend/node_modules/webpack/lib/NormalModule.js:252:20)\n    at /media/DATA/Projects/Spring/spring.boot.demo/frontend/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /media/DATA/Projects/Spring/spring.boot.demo/frontend/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/media/DATA/Projects/Spring/spring.boot.demo/frontend/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Promise.resolve.then.then.catch (/media/DATA/Projects/Spring/spring.boot.demo/frontend/node_modules/postcss-loader/lib/index.js:194:44)\n    at <anonymous>");
+exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
 
 /***/ }),
 
