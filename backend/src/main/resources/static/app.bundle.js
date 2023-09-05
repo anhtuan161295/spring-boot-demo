@@ -109,7 +109,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b95d73f0b70765aa8db1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "fb0ffd0e6fe8763ac0b4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -831,6 +831,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js!./src/App.scss":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/resolve-url-loader!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader!./node_modules/postcss-loader/lib!./node_modules/resolve-url-loader!./node_modules/sass-loader/lib/loader.js!./src/App.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Syntax Error \n\n(8:7) Unnecessary curly bracket\n\n \u001b[90m  6 | \u001b[39m\u001b[90m */\u001b[39m\n \u001b[90m  7 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 | \u001b[39m\u001b[33m:\u001b[39mroot \u001b[33m{\u001b[39m\n \u001b[90m    | \u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 | \u001b[39m  --blue\u001b[33m:\u001b[39m \u001b[35m#007bff\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 10 | \u001b[39m  --indigo\u001b[33m:\u001b[39m \u001b[35m#6610f2\u001b[39m\u001b[33m;\u001b[39m\n\n    at runLoaders (/media/DATA/Projects/Spring/spring.boot.demo/frontend/node_modules/webpack/lib/NormalModule.js:252:20)\n    at /media/DATA/Projects/Spring/spring.boot.demo/frontend/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /media/DATA/Projects/Spring/spring.boot.demo/frontend/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/media/DATA/Projects/Spring/spring.boot.demo/frontend/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Promise.resolve.then.then.catch (/media/DATA/Projects/Spring/spring.boot.demo/frontend/node_modules/postcss-loader/lib/index.js:194:44)\n    at <anonymous>");
+
+/***/ }),
+
 /***/ "./src/App.css":
 /*!*********************!*\
   !*** ./src/App.css ***!
@@ -868,9 +879,7 @@ var _logo2 = _interopRequireDefault(_logo);
 
 __webpack_require__(/*! ./App.css */ "./src/App.css");
 
-var _jqueryMin = __webpack_require__(/*! jquery/dist/jquery.min.js */ "./node_modules/jquery/dist/jquery.min.js");
-
-var _jqueryMin2 = _interopRequireDefault(_jqueryMin);
+__webpack_require__(/*! ./App.scss */ "./src/App.scss");
 
 var _UserController = __webpack_require__(/*! ./components/UserController */ "./src/components/UserController.js");
 
@@ -935,6 +944,61 @@ exports.default = App;
 
 /***/ }),
 
+/***/ "./src/App.scss":
+/*!**********************!*\
+  !*** ./src/App.scss ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader!../node_modules/resolve-url-loader!../node_modules/postcss-loader/lib!../node_modules/sass-loader/lib/loader.js!../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader!../node_modules/postcss-loader/lib!../node_modules/resolve-url-loader!../node_modules/sass-loader/lib/loader.js!./App.scss */ "./node_modules/css-loader/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js!./src/App.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../node_modules/css-loader!../node_modules/resolve-url-loader!../node_modules/postcss-loader/lib!../node_modules/sass-loader/lib/loader.js!../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader!../node_modules/postcss-loader/lib!../node_modules/resolve-url-loader!../node_modules/sass-loader/lib/loader.js!./App.scss */ "./node_modules/css-loader/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js!./src/App.scss", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function() {
+		var newContent = __webpack_require__(/*! !../node_modules/css-loader!../node_modules/resolve-url-loader!../node_modules/postcss-loader/lib!../node_modules/sass-loader/lib/loader.js!../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader!../node_modules/postcss-loader/lib!../node_modules/resolve-url-loader!../node_modules/sass-loader/lib/loader.js!./App.scss */ "./node_modules/css-loader/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js!./src/App.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	})(__WEBPACK_OUTDATED_DEPENDENCIES__); });
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
 /***/ "./src/components/UserController.js":
 /*!******************************************!*\
   !*** ./src/components/UserController.js ***!
@@ -982,10 +1046,14 @@ var UserController = function (_Component) {
   _createClass(UserController, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       fetch(url).then(function (response) {
-        return response.json;
+        return response.json();
       }).then(function (data) {
-        console.log(data);
+        _this2.setState({
+          users: data
+        });
       }, function (error) {
         console.log("error");
       });
@@ -993,6 +1061,28 @@ var UserController = function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var list = this.state.users.map(function (value, index) {
+        return _react2.default.createElement(
+          "tr",
+          { key: index },
+          _react2.default.createElement(
+            "th",
+            { scope: "row" },
+            value.id
+          ),
+          _react2.default.createElement(
+            "th",
+            null,
+            value.firstName
+          ),
+          _react2.default.createElement(
+            "th",
+            null,
+            value.lastName
+          )
+        );
+      });
+
       return _react2.default.createElement(
         "div",
         null,
@@ -1025,44 +1115,7 @@ var UserController = function (_Component) {
           _react2.default.createElement(
             "tbody",
             null,
-            _react2.default.createElement(
-              "tr",
-              null,
-              _react2.default.createElement(
-                "th",
-                { scope: "row" },
-                "1"
-              ),
-              _react2.default.createElement(
-                "td",
-                null,
-                "Mark"
-              ),
-              _react2.default.createElement(
-                "td",
-                null,
-                "Otto"
-              )
-            ),
-            _react2.default.createElement(
-              "tr",
-              null,
-              _react2.default.createElement(
-                "th",
-                { scope: "row" },
-                "2"
-              ),
-              _react2.default.createElement(
-                "td",
-                null,
-                "Jacob"
-              ),
-              _react2.default.createElement(
-                "td",
-                null,
-                "Thornton"
-              )
-            )
+            list
           )
         )
       );

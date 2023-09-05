@@ -39,7 +39,13 @@ CSS Loaders
 npm i style-loader css-loader svg-loader
 npm i less-loader less
 npm i sass-loader node-sass
-npm i -D postcss-loader
+npm i -D postcss-loader postcss-import postcss-preset-env postcss-cssnext postcss-js sugarss
+
+Bootstrap
+npm i -D bootstrap tether popper.js autoprefixer precss exports-loader imports-loader postcss-loader
+
+Font Awesome
+npm i -D font-awesome-loader font-awesome
 
 Extract CSS Plugins
 npm i --save-dev mini-css-extract-plugin

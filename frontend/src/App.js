@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import $ from "jquery/dist/jquery.min.js";
+import "./App.scss";
 
 import UserController from "./components/UserController";
 
