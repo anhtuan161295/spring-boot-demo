@@ -29,6 +29,9 @@ npm i -D extract-text-webpack-plugin@next
 // React hot reload
 npm i -D react-hot-loader
 
+// Browser sync with webpack dev server for hot reloading
+npm i -D browser-sync browser-sync-webpack-plugin webpack-dev-server
+
 // Webpack merge for many profiles
 npm i -D webpack-merge
 

@@ -20,12 +20,14 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const OfflinePlugin = require("offline-plugin");
 
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+
 module.exports = merge(common, {
   // Development config
   mode: "development",
   devServer: {
     hot: true,
-    contentBase: DIST_DIR,
+    contentBase: BACKEND_STATIC_DIR,
     publicPath: "",
     // port: 3000,
     // host: 'localhost',
@@ -76,6 +78,11 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: "[name].bundle.css",
       chunkFilename: "[id].bundle.css"
+    }),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      proxy: 'http://localhost:8080/'
     })
   ],
   optimization: {

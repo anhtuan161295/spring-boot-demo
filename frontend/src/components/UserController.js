@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios';
 
 const url = "/user";
 
@@ -10,19 +11,29 @@ class UserController extends Component {
     };
   }
 
+
+
   componentDidMount() {
-    fetch(url)
-      .then(response => response.json())
-      .then(
-        data => {
-          this.setState({
-            users: data
-          });
-        },
-        error => {
-          console.log("error");
-        }
-      );
+    axios.get(url)
+      .then(res => {
+        this.setState({
+          users: res.data
+        });
+      });
+
+
+    // fetch(url)
+    //   .then(response => response.json())
+    //   .then(
+    //     data => {
+    //       this.setState({
+    //         users: data
+    //       });
+    //     },
+    //     error => {
+    //       console.log("error");
+    //     }
+    //   );
   }
 
   render() {
@@ -32,6 +43,10 @@ class UserController extends Component {
           <th scope="row">{value.id}</th>
           <th>{value.firstName}</th>
           <th>{value.lastName}</th>
+          <th>
+            <button >Edit</button>
+            <button >Delete</button>
+          </th>
         </tr>
       );
     });
@@ -44,6 +59,7 @@ class UserController extends Component {
               <th>#</th>
               <th>First Name</th>
               <th>Last Name</th>
+              <th colSpan="2">Action</th>
             </tr>
           </thead>
           <tbody>{list}</tbody>

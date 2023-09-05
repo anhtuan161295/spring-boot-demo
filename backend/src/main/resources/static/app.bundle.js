@@ -109,7 +109,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3ca92349a9bebd11e874"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "08ca95667f1725c0caad"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -920,26 +920,6 @@ var App = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: "App" },
-        _react2.default.createElement(
-          "header",
-          { className: "App-header" },
-          _react2.default.createElement(
-            "h1",
-            { className: "App-title" },
-            "Welcome to React"
-          )
-        ),
-        _react2.default.createElement(
-          "p",
-          { className: "App-intro" },
-          "To get started, edit ",
-          _react2.default.createElement(
-            "code",
-            null,
-            "src/App.js"
-          ),
-          " and save to reload."
-        ),
         _react2.default.createElement(_UserController2.default, null)
       );
     }
@@ -1027,6 +1007,10 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+var _axios2 = _interopRequireDefault(_axios);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1056,15 +1040,24 @@ var UserController = function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      fetch(url).then(function (response) {
-        return response.json();
-      }).then(function (data) {
+      _axios2.default.get(url).then(function (res) {
         _this2.setState({
-          users: data
+          users: res.data
         });
-      }, function (error) {
-        console.log("error");
       });
+
+      // fetch(url)
+      //   .then(response => response.json())
+      //   .then(
+      //     data => {
+      //       this.setState({
+      //         users: data
+      //       });
+      //     },
+      //     error => {
+      //       console.log("error");
+      //     }
+      //   );
     }
   }, {
     key: "render",
@@ -1087,6 +1080,20 @@ var UserController = function (_Component) {
             "th",
             null,
             value.lastName
+          ),
+          _react2.default.createElement(
+            "th",
+            null,
+            _react2.default.createElement(
+              "button",
+              null,
+              "Edit"
+            ),
+            _react2.default.createElement(
+              "button",
+              null,
+              "Delete"
+            )
           )
         );
       });
@@ -1117,6 +1124,11 @@ var UserController = function (_Component) {
                 "th",
                 null,
                 "Last Name"
+              ),
+              _react2.default.createElement(
+                "th",
+                { colSpan: "2" },
+                "Action"
               )
             )
           ),
